@@ -1,26 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
 // lets see what happens :]]
+import Heart from "./images/heart.png";
+import { Box, Grommet, Heading, Image } from "grommet";
+
+const theme = {
+  global: {
+    font: {
+      family: "Comfortaa",
+      size: "18px",
+      height: "20px",
+    },
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to the nice place
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grommet theme={theme} full={true}>
+      <Box align={"center"} background={"black"} direction={"row"} fill={true}>
+        <Box fill={"horizontal"} align={"center"} direction={"column"}>
+          <Heading>Welcome to the nice place</Heading>
+          <Image src={Heart} width={'50vh'}/>
+        </Box>
+      </Box>
+    </Grommet>
   );
 }
 
