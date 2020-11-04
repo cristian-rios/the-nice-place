@@ -1,6 +1,7 @@
 // lets see what happens :]]
 import Heart from "./images/heart.png";
 import { Box, Grommet, Heading, Image } from "grommet";
+import firebase from "./firebaseSettings";
 
 const theme = {
   global: {
